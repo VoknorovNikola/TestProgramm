@@ -3,7 +3,6 @@ bool prost = false;
 bool napravl = false;
 bool setNapr = false;
 bool dva = false;
-string s = "";
 int n = 0;
 int m = 0;
 int kol = 0;
@@ -35,14 +34,7 @@ while (!setNapr)
 while (!isNum)
  {
     Console.WriteLine("Введите 1 или 2 числа через запятую");
-   // s = Console.ReadLine();
-   // isNum = int.TryParse(s, out n);
     string[] vvod = Console.ReadLine().Split(',');
-    if (vvod.Length > 2)
-    {
-        Console.WriteLine("Слишком много чисел через запятую");
-        continue;
-    }
     if (int.TryParse(vvod[0], out n)) isNum = true;
     else continue;
     for (int i = 0; i < vvod.Length; i++)
